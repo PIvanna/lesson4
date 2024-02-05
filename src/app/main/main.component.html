@@ -1,0 +1,38 @@
+<h1 id="namePage">My Phone Book!</h1>
+<form name="formSearch">
+    <input type="text" [(ngModel)]="field"  [placeholder]="placeholederInputSearch" name="inputSearch"
+        id="inputSearch">
+    <button type="button" id="buttonAdd" (click)="addPerson()">add phone</button>
+</form>
+<div class="table">
+    <div class="nameTable">
+        <div class="elementTable" (click)="changeSortName()">First name</div>
+        <div class="elementTable" (click)="changeSortSurname()">Last name</div>
+        <div class="elementTable" (click)="changeSortPhoneNumber()">Number</div>
+        <div class="elementTable">Edit</div>
+        <div class="elementTable">Delete</div>
+    </div>
+    <div class="rowTable" *ngFor="let user of arrPerson | sort:type | search:field; index as i  ">
+        <div class="elementTable">{{ user.name |  titlecase}}</div>
+        <div class="elementTable">{{ user.surname |  titlecase }}</div>
+        <div class="elementTable">{{ user.phoneNumber}}</div>
+        <div class="elementTable"><button type="button" (click)="edit(i)" class="buttonEdit" [ngStyle]="editSCSS">EDIT</button></div>
+        <div class="elementTable"><button type="button" (click)="delete(i)" class="buttonDelete" [ngStyle]="deleteSCSS">DELETE</button>
+        </div>
+    </div>
+
+</div>
+<div class="container" *ngIf="hide">
+    <form name="formAdd" id="formAdd">
+        <div class="upAddModal">
+            <h2 id="hAdd">Add phone</h2>
+            <button type="button" id="buttonClose" (click)="close()">X</button>
+        </div>
+        <div class="containerinputAdd">
+            <input name="inputAddName" [(ngModel)]="inputAddName" placeholder="Name here..." [ngStyle]="{'borderColor': isColorName ? 'black' : 'red'}" class="inputAdd" type="text">
+            <input name="inputAddSurname" [(ngModel)]="inputAddSurname" placeholder="Surname here..." [ngStyle]="{'borderColor': isColorSurname ? 'black' : 'red'}" class="inputAdd" type="text">
+            <input name="inputAddPhone" [(ngModel)]="inputAddPhone" placeholder="Phone here..." [ngStyle]="{'borderColor': isColorPhone ? 'black' : 'red'}" class="inputAdd" type="text">
+        </div>
+        <button type="button" id="buttonSave" (click)="save()">Save</button>
+    </form>
+</div>

@@ -1,0 +1,154 @@
+* {
+    margin: 0;
+    padding: 0;
+    box-sizing: border-box;
+}
+
+
+#namePage {
+    color: red;
+    width: 90%;
+    font-size: 40px;
+    margin: 20px auto;
+}
+
+form[name="formSearch"] {
+    width: 90%;
+    height: 50px;
+    border-top: 1px solid gainsboro;
+    border-bottom: 1px solid gainsboro;
+    margin: auto;
+}
+
+#inputSearch {
+    height: 30px;
+    width: 75%;
+    margin: 10px 5% 10px 0;
+    border: 1px outset gainsboro;
+    border-radius: 5px;
+    padding: 5px;
+}
+
+
+#buttonAdd {
+    width: 20%;
+    height: 30px;
+    border: none;
+    background-color: greenyellow;
+    color: white;
+    margin: 10px 0;
+    border-radius: 5px;
+}
+
+.table {
+    width: 90%;
+    min-height: 100px;
+    display: flex;
+    flex-direction: column;
+    margin: 20px auto;
+
+}
+
+.elementTable {
+    width: 20%;
+    height: 100%;
+    text-align: center;
+    padding: 20px;
+    font-size: 20px;
+    font-family: monospace;
+}
+
+
+.nameTable,
+.rowTable {
+    width: 100%;
+    height: 10%;
+    border: 1px solid black;
+    display: flex;
+    flex-direction: row;
+}
+
+.buttonEdit,
+.buttonDelete {
+    width: 100px;
+    height: 40px;
+    border: none;
+    border-radius: 10px;
+}
+
+.container {
+    width: 100%;
+    height: 100%;
+    background-color: rgba(176, 173, 173, 0.605);
+    position: absolute;
+    top: 0;
+    left: 0;
+    bottom: 0;
+    right: 0;
+    margin: auto;
+}
+
+#formAdd {
+    width: 30%;
+    height: 40%;
+    background-color: white;
+    position: absolute;
+    top: 0;
+    left: 0;
+    bottom: 0;
+    right: 0;
+    margin: auto;
+    border-radius: 20px;
+    display: flex;
+    flex-direction: column;
+    justify-content: space-around;
+}
+
+.upAddModal {
+    width: 90%;
+    margin: 10px auto;
+    display: flex;
+    flex-direction: row;
+    justify-content: space-between;
+    border-bottom: 2px solid gainsboro;
+}
+
+#hAdd {
+    font-size: 30px;
+}
+
+#buttonClose {
+    width: 30px;
+    height: 30px;
+    border: none;
+    background-color: initial;
+}
+
+.inputAdd{
+    width: 100%;
+    height: 30px;
+    border-radius: 5px;
+    padding: 5px;
+}
+
+.containerinputAdd{
+    width: 90%;
+    height: 150px;
+    margin: auto;
+    display: flex;
+    flex-direction: column;
+    justify-content: space-between;
+    padding-bottom: 10px;
+    border-bottom: 2px solid gainsboro;
+}
+
+#buttonSave{
+    width: 60px;
+    height: 30px;
+    background-color: rgb(68, 96, 199);
+    border: none;
+    color: white;
+    border-radius: 10px;
+    align-self: last baseline;
+    margin: 0 20px 10px 0;
+}
